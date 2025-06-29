@@ -1,0 +1,29 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Publisher";
+}
+<h1>Captivate Publisher</h1>
+<form id="publishForm">
+    <label>Development Directory:</label>
+    <input type="text" id="source" name="sourceDir" style="width:300px" />
+    <br/>
+    <label>Production Directory:</label>
+    <input type="text" id="target" name="targetDir" style="width:300px" />
+    <br/>
+    <button type="submit">Publish</button>
+</form>
+<pre id="result"></pre>
+@section Scripts {
+<script>
+ document.getElementById('publishForm').addEventListener('submit', async function(e) {
+     e.preventDefault();
+     const formData = new FormData(e.target);
+     const response = await fetch('/publish', {
+         method: 'POST',
+         body: new URLSearchParams(formData)
+     });
+     document.getElementById('result').textContent = await response.text();
+ });
+</script>
+}

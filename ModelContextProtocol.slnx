@@ -14,6 +14,7 @@
     <Project Path="samples/EverythingServer/EverythingServer.csproj" />
     <Project Path="samples/QuickstartClient/QuickstartClient.csproj" />
     <Project Path="samples/QuickstartWeatherServer/QuickstartWeatherServer.csproj" />
+    <Project Path="samples/WebPublisher/WebPublisher.csproj" />
     <Project Path="samples/TestServerWithHosting/TestServerWithHosting.csproj" />
   </Folder>
   <Folder Name="/Solution Items/">
